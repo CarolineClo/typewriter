@@ -5,10 +5,11 @@ const type1 = document.getElementById("typekey1");
 const type2 = document.getElementById("typekey2");
 const typeSpace = document.getElementById("typespace");
 const typeLast = document.getElementById("typelast");
-
-type();
+document.querySelector("button").addEventListener("click", type);
+document.getElementById("typewriter").innerHTML = "";
 
 function type() {
+  document.querySelector("button").style.display = "none";
   let sentance = text.substring(0, counter);
   document.getElementById("typewriter").innerHTML = sentance;
   if (counter < text.length) {
